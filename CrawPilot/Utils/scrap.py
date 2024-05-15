@@ -94,13 +94,15 @@ def vector_embeddings(id):
     for text in text_list:
         text_contents.append(text['summary'])
 
-    use_model = hub.KerasLayer("https://tfhub.dev/google/universal-sentence-encoder-large/5")
-    embeddings = use_model(text_contents)
-    embeddings = np.array(embeddings)
-    cosine_sim_matrix = cosine_similarity(embeddings)
-    
+    vectorizer = TfidfVectorizer(stop_words='english')
+
+    tfidf_vectors = vectorizer.fit_transform(text_contents)
+
+    # Calculate cosine similarity matrix
+    cosine_sim_matrix = cosine_similarity(tfidf_vectors)
+
+    # Print cosine similarity matrix
     print("Cosine Similarity Matrix:")
     print(cosine_sim_matrix)
-
-    return cosine_sim_matrix
+    return str(cosine_sim_matrix)
 
