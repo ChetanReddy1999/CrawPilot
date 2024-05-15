@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "89377414-30fb-44a1-8183-670f709c5271",
+		"name": "CrawlPilot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31477871"
+	},
+	"item": [
+		{
+			"name": "Crawl",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"urls\": [\n        \"https://en.wikipedia.org/wiki/Main_Page\",\n        \"https://www.nytimes.com/\",\n        \"https://edition.cnn.com/\",\n        \"https://www.bbc.com/news\",\n        \"https://www.theguardian.com/international\",\n        \"https://www.reuters.com/\",\n        \"https://www.wsj.com/\",\n        \"https://www.forbes.com/\",\n        \"https://www.nationalgeographic.com/\",\n        \"https://www.nasa.gov/\",\n        \"https://www.nature.com/nature/articles\",\n        \"https://www.sciencedaily.com/\",\n        \"https://www.economist.com/\",\n        \"https://www.ft.com/\",\n        \"https://www.techcrunch.com/\",\n        \"https://www.wired.com/\",\n        \"https://www.theverge.com/\",\n        \"https://www.usatoday.com/\",\n        \"https://www.bloomberg.com/\",\n        \"https://www.aljazeera.com/\",\n        \"https://www.huffpost.com/\",\n        \"https://www.businessinsider.com/\",\n        \"https://www.npr.org/\",\n        \"https://www.apnews.com/\",\n        \"https://www.buzzfeednews.com/\",\n        \"https://www.vox.com/\",\n        \"https://www.washingtonpost.com/\",\n        \"https://www.telegraph.co.uk/\",\n        \"https://www.thetimes.co.uk/\",\n        \"https://www.theatlantic.com/\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/crawl/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"crawl",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Report API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/report/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"report",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Result API",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":\"02ce9bfec40949d5a4974f0d3691cf5c\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/result/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"result",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cosine",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":\"02ce9bfec40949d5a4974f0d3691cf5c\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/cosine/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"cosine",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
